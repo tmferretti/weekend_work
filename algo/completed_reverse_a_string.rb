@@ -3,15 +3,15 @@
 # comes with Ruby!
 
 def reverse_a_string(string)
-  reversed_string_holder = []
-  split_string = string.split("")
-  i = (string.length - 1)
-  while i >= 0
-    reversed_string_holder << split_string[i]
-    i -= 1
+  reversed_array = []
+  input = string.chars.to_a
+  i = -1
+  input.to_a.each do
+    reversed_array << input[i]
+    i-=1
   end
-  reversed_string_holder.join
-
+  reversed_string = reversed_array.join
+  return reversed_string
 end
 
 # Driver code - don't touch anything below this line.
